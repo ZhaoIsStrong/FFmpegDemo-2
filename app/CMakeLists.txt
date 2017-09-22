@@ -4,7 +4,8 @@ cmake_minimum_required(VERSION 3.4.1)
 #路径:\SDK\ndk-bundle\platforms\android-23\arch-arm\usr\lib
 find_library( log-lib
               log )
-
+find_library( android-lib
+              android )
 #设置变量
 set(DIR ../../../../libs)
 
@@ -83,4 +84,5 @@ target_link_libraries( native-lib
                        postproc-53
                        swresample-1
                        swscale-3
-                       ${log-lib} )
+                       ${log-lib}
+                       ${android-lib})

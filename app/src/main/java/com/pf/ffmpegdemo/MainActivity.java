@@ -1,10 +1,13 @@
 package com.pf.ffmpegdemo;
 
+import android.content.Intent;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.pf.ffmpegdemo.playnativevideo.PlayNativeVideoActivity;
 
 import java.io.File;
 
@@ -41,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
             outputFile.delete();
         }
         openFile(inputStr, outStr);
+    }
+
+    public void toNativeVideo(View view) {
+        startActivity(new Intent(MainActivity.this, PlayNativeVideoActivity.class));
     }
 
     public native void openFile(String inputFileName, String outFileName);

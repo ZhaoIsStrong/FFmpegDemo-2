@@ -8,12 +8,19 @@
     tools:context="com.pf.ffmpegdemo.MainActivity">
 
     <Button
-        android:id="@+id/sample_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:onClick="load"
         android:padding="10dp"
-        android:text="Hello World!" />
+        android:text="生成yuv文件" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="toNativeVideo"
+        android:padding="10dp"
+        android:text="原生播放" />
 
 </LinearLayout>
